@@ -1,0 +1,26 @@
+/*
+Sketch 3-03
+Blink Gradually Slows
+*/
+
+int ledPin = 13;
+int delayPeriod = 50;
+
+void setup ()
+{
+  pinMode (ledPin, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(ledPin, HIGH);
+  delay(delayPeriod);
+  digitalWrite(ledPin, LOW);
+  delay(delayPeriod);
+  
+  delayPeriod = delayPeriod + 50;
+  if (delayPeriod > 2000)
+  {
+    delayPeriod = 50;
+  }
+}
