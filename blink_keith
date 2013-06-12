@@ -1,0 +1,44 @@
+/* Keith beta- 
+Hospital monitor
+Blink every sec for 5 min then blink at 100
+mod with 2 led
+mod with push button to reset loop
+sketch 3-09 mod
+*/
+
+int ledPin = 12;
+int delayPeriod = 1000;
+int count = 0;
+int inputPin = 5;
+
+void setup()
+{
+  pinMode(ledPin, OUTPUT);
+  pinMode(13, OUTPUT);
+  pinMode (inputPin, INPUT);
+  digitalWrite (inputPin, HIGH);
+}
+
+void loop()
+{
+  digitalWrite(ledPin, HIGH);
+  delay(delayPeriod);
+  digitalWrite(ledPin, LOW);
+  delay(delayPeriod);
+  count ++;
+ 
+  // blink for x count; 1000 = 1 sec or count = 1; count = 300 is 5 min
+  
+  if (count == 10)
+  {
+    count = 0;
+  
+  digitalWrite(13, HIGH);
+  delay(10000);
+  digitalWrite(13, LOW);
+ 
+  int switchOpen = digitalRead (inputPin);
+  digitalWrite (ledPin, ! switchOpen) ;
+  
+}
+}
