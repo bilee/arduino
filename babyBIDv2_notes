@@ -1,0 +1,5 @@
+BID v2
+I created BID project- press easy button (closet press light from Dollar store)and rgb led changes color;
+V2, I want RGB led to constantly change color and then change again when pressed;
+
+so theory is arduino PWM? sends signal to rgb variating color then same code as existing babyBID project applies.....
