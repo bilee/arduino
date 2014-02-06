@@ -1,0 +1,95 @@
+
+
+int r = 2;
+int g = 3;
+int b = 4;
+int time = 1000;
+int count = 0;
+// int reset = 5;
+
+// the setup routine runs once when you press reset:
+void setup() {                
+  // initialize the digital pin as an output.
+  pinMode(r, OUTPUT);
+  pinMode(g, OUTPUT);
+  pinMode(b, OUTPUT);
+}
+
+
+void loop() {
+  digitalWrite(r, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);               // wait for a second
+  digitalWrite(r, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);               // wait for a second
+  count ++;
+  //edit code -- | blink for 15 min --> 15000 then the next color blinks for 15000, etc
+  // blink for x count; 1000 = 1 sec or count = 1; count = 300 is 5 min
+  
+  if (count == 900)           //blink red LED for 15 min... | after 15 min then...
+  
+  {
+  
+  count = 0;
+  
+  digitalWrite(g, HIGH);  
+  delay(1000);           
+  digitalWrite(g, LOW); 
+  delay(1000);               
+  
+  count ++;
+  
+  if (count == 900)           //blink green LED for 15 min... | 30 min elapse; then...
+  
+  {
+    count = 0;                // blink green and blue LED for 15 min....
+    digitalWrite(g, HIGH); 
+  delay(1000);           
+  digitalWrite(g, LOW); 
+  delay(1000);         
+  digitalWrite(b, HIGH);
+  delay(1000);     
+  digitalWrite(b, LOW); 
+  delay(1000);          
+
+  count ++;
+  
+  if (count == 900)        // 45  min elapse..
+  
+  {
+    count = 0;   
+    digitalWrite(r, HIGH);                      // blink red green and blue LED for 15 min....
+  delay(1000);
+    digitalWrite(r,LOW);
+  delay(1000);  
+    digitalWrite(g, HIGH); 
+  delay(1000);           
+  digitalWrite(g, LOW); 
+  delay(1000);         
+  digitalWrite(b, HIGH);
+  delay(1000);     
+  digitalWrite(b, LOW); 
+  delay(1000);
+  
+  count ++;
+  
+  if (count == 900)        //60 min elapse..
+  {
+    count = 0;
+    digitalWrite(r, HIGH);                      // blink red green and blue LED fast!
+  delay(100);
+    digitalWrite(r,LOW);
+  delay(100);  
+    digitalWrite(g, HIGH); 
+  delay(100);           
+  digitalWrite(g, LOW); 
+  delay(100);         
+  digitalWrite(b, HIGH);
+  delay(100);     
+  digitalWrite(b, LOW); 
+  delay(100);
+    
+}
+  }
+  }
+  }
+  }
