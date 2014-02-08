@@ -1,0 +1,141 @@
+// blink timer long form
+
+const int r = 2;
+const int g = 3;
+const int y = 4;
+
+void setup (){
+  pinMode(r, OUTPUT);
+  pinMode(g, OUTPUT);
+  pinMode(y, OUTPUT);
+}
+                                  //900 sec in 15 minutes
+                                  //each LED cycle is 2 sec- on off  |need 450 cycles
+void loop(){
+  digitalWrite(r, HIGH);
+  delay (1000);
+  digitalWrite(r,LOW);
+  delay(1000);
+   digitalWrite(r, HIGH);
+  delay (1000);
+  digitalWrite(r,LOW);
+  delay(1000); 
+  digitalWrite(r, HIGH);
+  delay (1000);
+  digitalWrite(r,LOW);
+  delay(1000);
+   digitalWrite(r, HIGH);
+  delay (1000);
+  digitalWrite(r,LOW);
+  delay(1000);
+  digitalWrite(r, HIGH);
+  delay (1000);
+  digitalWrite(r,LOW);
+  delay(1000);
+   digitalWrite(r, HIGH);
+  delay (1000);
+  digitalWrite(r,LOW);
+  delay(1000); 
+  digitalWrite(r, HIGH);
+  delay (1000);
+  digitalWrite(r,LOW);
+  delay(1000);
+   digitalWrite(r, HIGH);
+  delay (1000);
+  digitalWrite(r,LOW);
+  delay(1000);
+   digitalWrite(r, HIGH);
+  delay (1000);
+  digitalWrite(r,LOW);
+  delay(1000);
+   digitalWrite(r, HIGH);
+  delay (1000);
+  digitalWrite(r,LOW);
+  delay(1000);
+  //10
+  
+  
+   digitalWrite(g, HIGH);
+  delay (1000);
+  digitalWrite(g,LOW);
+  delay(1000);
+  digitalWrite(g, HIGH);
+  delay (1000);
+  digitalWrite(g,LOW);
+  delay(1000);
+  digitalWrite(g, HIGH);
+  delay (1000);
+  digitalWrite(g,LOW);
+  delay(1000);
+  digitalWrite(g, HIGH);
+  delay (1000);
+  digitalWrite(g,LOW);
+  delay(1000);
+  digitalWrite(g, HIGH);
+  delay (1000);
+  digitalWrite(g,LOW);
+  delay(1000);
+  digitalWrite(g, HIGH);
+  delay (1000);
+  digitalWrite(g,LOW);
+  delay(1000);
+  digitalWrite(g, HIGH);
+  delay (1000);
+  digitalWrite(g,LOW);
+  delay(1000);
+  digitalWrite(g, HIGH);
+  delay (1000);
+  digitalWrite(g,LOW);
+  delay(1000);
+  digitalWrite(g, HIGH);
+  delay (1000);
+  digitalWrite(g,LOW);
+  delay(1000);
+  digitalWrite(g, HIGH);
+  delay (1000);
+  digitalWrite(g,LOW);
+  delay(1000);
+  //10 green
+  
+  digitalWrite(y, HIGH);
+  delay (1000);
+  digitalWrite(y,LOW);
+  delay(1000);
+  digitalWrite(y, HIGH);
+  delay (1000);
+  digitalWrite(y,LOW);
+  delay(1000);
+  digitalWrite(y, HIGH);
+  delay (1000);
+  digitalWrite(y,LOW);
+  delay(1000);
+  digitalWrite(y, HIGH);
+  delay (1000);
+  digitalWrite(y,LOW);
+  delay(1000);
+  digitalWrite(y, HIGH);
+  delay (1000);
+  digitalWrite(y,LOW);
+  delay(1000);
+  digitalWrite(y, HIGH);
+  delay (1000);
+  digitalWrite(y,LOW);
+  delay(1000);
+  digitalWrite(y, HIGH);
+  delay (1000);
+  digitalWrite(y,LOW);
+  delay(1000);
+  digitalWrite(y, HIGH);
+  delay (1000);
+  digitalWrite(y,LOW);
+  delay(1000);
+  digitalWrite(y, HIGH);
+  delay (1000);
+  digitalWrite(y,LOW);
+  delay(1000);
+  digitalWrite(y, HIGH);
+  delay (1000);
+  digitalWrite(y,LOW);
+  delay(1000);
+ //10 yellow 
+}
