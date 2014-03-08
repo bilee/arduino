@@ -1,0 +1,68 @@
+//sketch 3-8
+
+int ledMulti = 9;
+int ledR = 10;
+int ledG = 11;
+int ledY = 12;
+int delayPeriod = 1000;
+
+void setup(){
+  pinMode (ledR, OUTPUT);
+  pinMode (ledG, OUTPUT);
+  pinMode (ledY, OUTPUT);
+  pinMode (ledMulti, OUTPUT);
+}
+
+void loop(){
+  for (int i = 0; i < 150; i ++)
+  {
+//--------------------------------------- red LED- 0--5 min
+    digitalWrite(ledR, HIGH);
+  delay(delayPeriod);
+  digitalWrite(ledR, LOW);
+  delay(delayPeriod);
+  }
+  //delay(3000);
+  
+  for (int i = 0; i < 150; i ++)
+  {
+    //--------------------------------------- yellow LED- 5--10 min
+    digitalWrite(ledY, HIGH);
+    delay(delayPeriod);
+    digitalWrite(ledY, LOW);
+    delay(delayPeriod);
+  }
+ for (int i = 0; i < 150; i ++)
+  {
+    //--------------------------------------- -------green LED- 10--15 min
+    digitalWrite(ledG, HIGH);
+    delay(delayPeriod);
+    digitalWrite(ledG, LOW);
+    delay(delayPeriod);
+}
+for (int i = 0; i < 1; i ++)
+  {
+    //------------------------------------------------------ Multi LED- 15--20 min
+    digitalWrite(ledMulti, HIGH);
+    delay(300000);
+    digitalWrite(ledMulti, LOW);
+    delay(100);
+  }
+  for (int i = 0; i < 600; i ++) //old value = 300
+  {
+    //--------------------------------------- --------yellow LED- 20--25 min
+    digitalWrite(ledY, HIGH);
+    delay(250);                         //old value = 500
+    digitalWrite(ledY, LOW);
+    delay(250);
+  }
+ for (int i = 0; i < 1; i ++)
+  {
+    //--------------------------------------- green LED- 25--30 min
+    digitalWrite(ledG, HIGH);
+    delay(300000);
+    digitalWrite(ledG, LOW);
+    delay(100);
+}
+  delay(30000);
+}
