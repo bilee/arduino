@@ -6,9 +6,10 @@ this is to demo LED timer; Timer measures 30min in the final code (found in ardu
 300 = 5 min
 as delayTime = 300000
 
-Time has been shortened in this demo- 
-download info:
-arduino/LED_timer-trim-code for final code that measures 5 min intervals;
+ 
+Download Info:
+Time has been shortened in this demo - arduino/LED_timer-trim-code_demo
+For final code that measures color as 5 min intervals- arduino/LED_timer-trim-code
 fritzing wiring illustration ___________
 
 I eventually want to put this code on an ATtiny chip and power with a battery.
@@ -22,13 +23,13 @@ Yellow  = 20-25; warns time is getting close to end- glows solid 10 sec, pause 1
 Green   = 25-30; last 5 min! Glows solid green;
 Green   = 30 min blinks to signal 30 minutes has been reached;
 
-In this code, the LED blink order is 
-Red 
-Yellow 
-Green
-Multi
-Yellow
-Green
+In this code, the LED blink order is the same with diff timing-
+Red     - blink 5 times
+Yellow  - blink 5 times 
+Green   - blink 5 times
+Multi   - 10 sec
+Yellow  - digitalWrite HIGH 10 sec x3
+Green   - solid 10 sec, then blinks to signal end; loops to beginning
 */
 
 int ledMulti = 9;
@@ -97,7 +98,7 @@ for (int i = 0; i < 1; i ++)
  
   {  
     digitalWrite(ledG, HIGH);
-    delay(10000);                      //green HIGH 7 sec
+    delay(10000);                      //green HIGH 10 sec
     digitalWrite(ledG, LOW);
     delay(100);
 }
