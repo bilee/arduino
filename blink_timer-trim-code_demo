@@ -1,5 +1,6 @@
 //LED blink timer 
 /* 
+--    --- - - - - - ---- - - - -  - - - - - ----- - ---- - - --- --- ---- 
 this is to demo LED timer; Timer measures 30min in the final code (found in arduino/blink_timer-trim-code);
 
 
@@ -12,7 +13,7 @@ Time has been shortened in this demo - arduino/LED_timer-trim-code_demo
 For final code that measures color as 5 min intervals- arduino/LED_timer-trim-code
 fritzing wiring illustration ___________
 
-I eventually want to put this code on an ATtiny chip and power with a battery.
+I eventually want to put this code on an ATtiny chip and power with a battery in a smaller enclosure.
 
 Again, in the final code, each color will blink for 5 min; 
 Red     = 0-5 min; 
@@ -30,6 +31,7 @@ Green   - blink 5 times
 Multi   - 10 sec
 Yellow  - digitalWrite HIGH 10 sec x3
 Green   - solid 10 sec, then blinks to signal end; loops to beginning
+--    --- - - - - - ---- - - - -  - - - - - ----- - ---- - - --- --- ---- 
 */
 
 int ledMulti = 9;
