@@ -1,0 +1,86 @@
+//sketch 3-8
+// all LEDs are in PWM holes
+int ledMulti = 9;
+int ledR = 10;
+int ledG = 11;
+int ledY = 13;
+int delayPeriod = 1000;
+
+void setup(){
+  pinMode (ledR, OUTPUT);
+  pinMode (ledG, OUTPUT);
+  pinMode (ledY, OUTPUT);
+  pinMode (ledMulti, OUTPUT);
+}
+
+void loop(){
+ //--------------------------------------- red LED- 0--5 min
+  
+  for (int i = 0; i < 5; i ++)
+  {
+    digitalWrite(ledR, HIGH);
+  delay(delayPeriod);
+  digitalWrite(ledR, LOW);
+  delay(delayPeriod);
+  }
+  
+ 
+ //--------------------------------------- yellow LED- 5--10 min
+  for (int i = 0; i < 5; i ++)
+  {
+     digitalWrite(ledY, HIGH);
+    delay(delayPeriod);
+    digitalWrite(ledY, LOW);
+    delay(delayPeriod);
+  }
+  
+  //--------------------------------------- -------green LED- 10--15 min
+ for (int i = 0; i < 5; i ++)
+  { 
+    digitalWrite(ledG, HIGH);
+    delay(delayPeriod);
+    digitalWrite(ledG, LOW);
+    delay(delayPeriod);
+}
+
+//------------------------------------------------------ Multi LED- 15--20 min
+for (int i = 0; i < 1; i ++)
+  {
+    digitalWrite(ledMulti, HIGH);
+    delay(10000);                                            //HIGH 10 sec
+    digitalWrite(ledMulti, LOW);
+    delay(100);
+  }
+  
+  //--------------------------------------------------------- --------yellow LED- 20--25 min
+  for (int i = 0; i < 3; i ++) //old value = 300
+  {
+   digitalWrite(ledY, HIGH);
+    delay(10000);                                            //yellow blink 10 sec HIGH 3x times
+    digitalWrite(ledY, LOW);
+    delay(1000);
+  }   
+
+//--------------------------------------- green LED- 25--30 min
+ //for (int i = 0; i < 1; i ++)
+ 
+  {  
+    digitalWrite(ledG, HIGH);
+    delay(10000);                      //green HIGH 7 sec
+    digitalWrite(ledG, LOW);
+    delay(100);
+}
+
+ for (int i = 0; i < 10; i ++)
+ 
+ {   
+    digitalWrite(ledG, HIGH);
+    delay(150);
+    digitalWrite(ledG, LOW);
+    delay(150);
+{
+  delay(500);
+}
+//-------------------------------- need reset button
+// almost got it! LED blinks at the end of 30 min, then loops to beginning
+}}
