@@ -1,4 +1,4 @@
-//sketch 3-8
+//LED blink timer 
 /* 
 this is to demo LED timer; Timer measures 30min in the final code (found in arduino/blink_timer-trim-code);
 
