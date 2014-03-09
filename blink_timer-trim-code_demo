@@ -1,5 +1,36 @@
 //sketch 3-8
-// all LEDs are in PWM holes
+/* 
+this is to demo LED timer; Timer measures 30min in the final code (found in arduino/blink_timer-trim-code);
+
+
+300 = 5 min
+as delayTime = 300000
+
+Time has been shortened in this demo- 
+download info:
+arduino/LED_timer-trim-code for final code that measures 5 min intervals;
+fritzing wiring illustration ___________
+
+I eventually want to put this code on an ATtiny chip and power with a battery.
+
+Again, in the final code, each color will blink for 5 min; 
+Red     = 0-5 min; 
+Yellow  = 5-10; 
+Green   = 10-15;
+Multi   = 15-20; glows various colors
+Yellow  = 20-25; warns time is getting close to end- glows solid 10 sec, pause 1 sec, solid 10, etc;
+Green   = 25-30; last 5 min! Glows solid green;
+Green   = 30 min blinks to signal 30 minutes has been reached;
+
+In this code, the LED blink order is 
+Red 
+Yellow 
+Green
+Multi
+Yellow
+Green
+*/
+
 int ledMulti = 9;
 int ledR = 10;
 int ledG = 11;
