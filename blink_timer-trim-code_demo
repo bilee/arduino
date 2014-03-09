@@ -31,6 +31,18 @@ Green   - blink 5 times
 Multi   - 10 sec
 Yellow  - digitalWrite HIGH 10 sec x3
 Green   - solid 10 sec, then blinks to signal end; loops to beginning
+
+Applications:
+Of course you can use a clock or watch, right?!?
+The time translation is pretty simple, based on traffic light colors- red yellow green (go, go, go!)
+I used this for timimg cooking- I knew that when it stopped flashing yellow, 10 min had passed- 
+my noodles & rice was done!; 
+put in your 10,000 hrs  of mastering your craft (m.gladwell- Outliers http://gladwell.com/outliers/the-10000-hour-rule/)
+by measuring 30 min of study time; 
+I use it to help me get out of the house in the moring for work;
+
+*It looks cool, and you dont have to obsess over staring at a clock; this represents time as color and flashes.
+
 --    --- - - - - - ---- - - - -  - - - - - ----- - ---- - - --- --- ---- 
 */
 
