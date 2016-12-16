@@ -6,6 +6,7 @@
 //modified by jw 7/21/15
 // file name: keypad_quiktyper_cmus_4x4_4_LED_SHIFTkey
 // try this!!!
+// search: arduino button press and hold
 // http://playground.arduino.cc/Code/HoldButton
 #include <Keypad.h>
 
