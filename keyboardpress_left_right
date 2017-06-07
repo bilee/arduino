@@ -1,0 +1,46 @@
+ //https://www.arduino.cc/en/Reference/KeyboardPress
+ 
+
+// use this option for Windows and Linux:
+ char ctrlKey8 = KEY_LEFT_ARROW;  
+ char ctrlKey9 = KEY_RIGHT_ARROW;  
+
+void setup() {
+  // make pin 8 and 9 an input and turn on the
+  // pullup resistor so it goes high unless
+  // connected to ground:
+  pinMode(8, INPUT_PULLUP);
+  pinMode(9, INPUT_PULLUP);
+  // initialize control over the keyboard:
+  Keyboard.begin();
+}
+
+void loop() {
+  while (digitalRead(8) == HIGH) {
+    // do nothing until pin 8 goes low
+    delay(500);
+  }
+  delay(1000);
+  
+  //pin9
+  {
+  while (digitalRead(9) == HIGH) {
+    // do nothing until pin 9 goes low
+    delay(500);
+  }
+  delay(1000);
+  
+  
+  Keyboard.press(ctrlKey8);
+  
+  delay(100);
+  
+   Keyboard.press(ctrlKey9);
+  
+  delay(100);
+  
+  Keyboard.releaseAll();
+ 
+  delay(1000);
+}
+ 
