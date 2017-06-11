@@ -1,30 +1,20 @@
- //https://www.arduino.cc/en/Reference/KeyboardPress
- 
+#include <Keyboard.h>
 
-// use this option for Windows and Linux:
- char ctrlKey = KEY_LEFT_ARROW;  
+// Arduino Leonardo: Send key when a button is pressed.
 
 void setup() {
-  // make pin 2 an input and turn on the
-  // pullup resistor so it goes high unless
-  // connected to ground:
   pinMode(2, INPUT_PULLUP);
-  // initialize control over the keyboard:
   Keyboard.begin();
 }
 
 void loop() {
-  while (digitalRead(2) == HIGH) {
-    // do nothing until pin 2 goes low
-    delay(500);
+  //if the button is pressed
+  if(digitalRead(2)==HIGH){
+    // e.g. Apple's CMD key
+    // Keyboard.press(KEY_LEFT_GUI);
+    Keyboard.press(KEY_LEFT_ARROW);
+    delay(100);
+    Keyboard.releaseAll();
+    delay(200);
   }
-  delay(1000);
-  // new document:
-  Keyboard.press(ctrlKey);
-  //Keyboard.press('n');
-  delay(100);
-  Keyboard.releaseAll();
-  // wait for new window to open:
-  delay(1000);
 }
- 
