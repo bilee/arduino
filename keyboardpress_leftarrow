@@ -1,6 +1,7 @@
 #include <Keyboard.h>
 
 // Arduino Leonardo: Send key when a button is pressed.
+// wiring -- https://www.arduino.cc/en/Tutorial/KeyboardAndMouseControl
 
 void setup() {
   pinMode(2, INPUT_PULLUP);
