@@ -1,0 +1,72 @@
+#include <Key.h>
+#include <Keypad.h>
+
+#include <Keyboard.h>
+
+
+
+ const byte ROWS = 4;
+ const byte COLS = 4;
+ char keys[ROWS][COLS] = {
+   {'A', '3', '2', '1'},
+   {'B', '6', '5', '4'},
+   {'C', '9', '8', '7'},
+   {'D', '#', '0', '*'},
+ };
+ 
+ byte rowPins[ROWS] = {6, 7, 8, 9}; //connect to the row pinouts of the keypad
+ byte colPins[COLS] = {2, 3, 4, 5}; //connect to the column pinouts of the keypad
+ 
+ // Create the Keypad
+Keypad kpd = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
+ 
+void setup ()
+{
+ // initialize control over the keyboard:
+ Keyboard.begin();
+// keyboard.setDebounceTime(250);
+
+}  // end of setup
+
+void loop ()
+ {
+  byte key =  kpd.getKey();
+  if (!key)
+    return;
+   
+ switch (key)
+   {
+   case '1': Keyboard.println ('a'); break;   
+   case '2': Keyboard.println ('b'); break; 
+   case '3': Keyboard.println ('c'); break;  
+   case 'A': Keyboard.println ("d"); break; 
+     
+   // row 2
+   case '4': Keyboard.println ('e'); break;  
+   case '5': Keyboard.println ('2'); break;   
+   //case '6': Keyboard.println ('3'); break; 
+   case '6': Keyboard.println ('t'); break;   
+   case 'B': Keyboard.println ('r'); break; 
+  // case 'B': Keyboard.println ('4'); break; 
+     
+  //row3
+   case '7': Keyboard.println ('m'); break;  //vol down
+   case '8': Keyboard.println ('l'); break;  //vol up 
+  // case '9': Keyboard.println ('n'); break;  //nav left  
+   case '9': Keyboard.println ('n'); break;  //nav left
+   case 'C': Keyboard.println ("o"); break;  // nav right
+    
+  //row 4
+   case '*': Keyboard.println ('g'); break;    // pause
+   case '0': Keyboard.println ('f'); break;    // skip
+   case '#': Keyboard.println ('e'); break;    // clear
+   case 'D': Keyboard.println ('j'); break;   // shut down
+   
+  
+   
+   
+
+   // and so on ...
+     
+   } // end of switch
+ } // end of loop
